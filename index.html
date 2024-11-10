@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisir un Rapport</title>
+    <style>
+        /* إعدادات التصميم العامة */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background: url('idex.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding-left: 30px;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1; /* يجعل المحتوى فوق الصورة الخلفية */
+        }
+
+        /* تنسيق العنوان وتأثير الكتابة */
+        h1 {
+            margin-bottom: 30px;
+            color: #ffd700;
+            font-size: 2.5em;
+            animation: fadeIn 1.5s ease-in-out;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        }
+
+        /* حركة fadeIn */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* تنسيق الصورة الجانبية */
+        .side-logo {
+            position: absolute;
+            right: 30px;
+            top: 50px;
+            width: 700px;
+            height: auto;
+            transition: all 0.3s ease;
+        }
+
+        /* زر الأول - أخضر */
+        .btn-green {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 15px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-green:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        /* زر الثاني - برتقالي */
+        .btn-orange {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 15px;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-orange:hover {
+            background-color: #e68900;
+            transform: scale(1.1);
+        }
+
+        /* تفاعل الصورة والشاشة الصغيرة */
+        @media (max-width: 768px) {
+            body {
+                justify-content: center;
+                padding: 0;
+                text-align: center;
+            }
+            .side-logo {
+                position: relative;
+                right: 0;
+                top: 0;
+                margin-bottom: 40px;
+                width: 180px;
+            }
+            .container {
+                padding-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .btn-green, .btn-orange {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشعار على الجانب الأيمن -->
+    <img src="logo.png" alt="Logo" class="side-logo">
+
+    <!-- المحتوى المركزي -->
+    <div class="container">
+        <h1>Veuillez choisir un rapport</h1>
+        <a href="rapport1.html" class="btn-green">Grille d’observation de l’Educateur</a>
+        <a href="rapport2.html" class="btn-orange">Rapport de suivi</a>
+    </div>
+
+</body>
+</html>
